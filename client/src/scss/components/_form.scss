@@ -1,0 +1,112 @@
+.form-component {
+    .input-name {
+        font-size: 1.2rem;
+        color: $gray1;
+    }
+
+    .section {
+        margin: 4rem 0;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .label {
+        display: flex;
+        align-items: flex-start;
+        font-weight: 600;
+
+        &.check {
+            margin-top: 1.4rem;
+            font-size: 1.2rem;
+        }
+
+        &:not(.check) {
+            margin: .8rem 0 1.6rem;
+            display: flex;
+            border: 1px solid $gray2;
+            border-radius: 1.2rem;
+            font-size: 1.6rem;
+            overflow: hidden;
+            align-items: center;
+            padding-left: 1.4rem;
+        }
+
+        .input-icon {
+            font-size: 2.4rem;
+            fill: $gray2;
+        }
+
+        .input:not([type="checkbox"]) {
+            padding: 2rem 1.6rem;
+            border: none;
+            width: 100%;
+            font-size: 1.6rem;
+            outline: none;
+        }
+
+        select.input {
+            color: $gray2;
+        }
+
+        .input[type="checkbox"] {
+            margin-right: 1.2rem;
+        }
+    }
+
+    .form-wrapper {
+        display: flex;
+        justify-content: space-between;
+        
+        .input-wrapper {
+            width: calc(50% - 3rem);
+        }
+    }
+
+    .button-wrapper {
+        text-align: right;
+    }
+
+    .button {
+        background: $orange;
+        border-radius: 1.2rem;
+        padding: 1.6rem;
+        width: 16.6rem;
+        color: $white;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        
+        &:hover {
+            background: darken($orange, 10%);
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .form-wrapper {
+            .input-wrapper {
+                width: calc(50% - 1rem);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .input-name {
+            font-size: 1rem;
+        }
+
+        .label {
+            .input:not([type="checkbox"]) {
+                font-size: 1.2rem;
+                padding: 1.4rem;
+            }
+
+            .input-icon {
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.column-structure {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+
+    .form-component {
+        width: calc(60% - 12rem);
+        margin-right: 12rem;
+    }
+
+    .cart-component {
+        width: 40%;
+    }
+
+    @media (max-width: 1200px) {
+        .form-component {
+            width: calc(60% - 6rem);
+            margin-right: 6rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 2rem;
+
+        .form-component,
+        .cart-component {
+            width: 100%;
+        }
+
+        .form-component {
+            margin-right: 0;
+        }
+
+        .cart-component {
+            order: -1;
+            margin-bottom: 4rem;
+        }
+    }
+}
